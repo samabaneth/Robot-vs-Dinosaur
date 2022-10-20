@@ -10,11 +10,15 @@ class Battlefield:
         print('\nShall we play a game?\n')
     def fight(self):
        while self.dinosaur.health > 0 and self.robot.health > 0:
+
+        self.robot.attack(self.dinosaur)
+        print('\nMichael smacked Cora with the scepter! Cora took 25 damage! Coras remaining health:\n')
+        print(self.dinosaur.health)
+        
         self.dinosaur.attack(self.robot) 
+        print('\nCora chomped Michael! Michael took 25 damage! Michaels remaining health:\n')
         print(self.robot.health)
-        print('\nCora chomped Michael!\n')
-    def victory(self):
-        if self.dinosaur.health < 0:
-            print('\nCongratulations Michael\n')
-        if self.robot.health < 0:
-            print('\nCongratulations Cora\n')
+        
+    def victory(self): 
+        if self.robot.health <= 0:
+            print('\nCongratulations Cora, you defeated Michael!\n')
