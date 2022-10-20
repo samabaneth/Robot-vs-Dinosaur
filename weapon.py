@@ -4,6 +4,6 @@ class Weapon:
         self.name = "scepter"
         self.attack_power = 25
 
-    def hit_cora(self, cora_health):
-        self.attack_power -= cora_health
+    def attack(self, cora):
+        self.attack_power -= cora
         
