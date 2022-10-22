@@ -12,7 +12,7 @@ class Battlefield:
        while self.dinosaur.health > 0 and self.robot.health > 0:
 
         self.robot.attack(self.dinosaur)
-        print('\nMichael smacked Cora with the scepter! Cora took 25 damage! Coras remaining health:\n')
+        print('\nMichael smacked Cora with the scepter! Cora took 20 damage! Coras remaining health:\n')
         print(self.dinosaur.health)
         
         self.dinosaur.attack(self.robot) 
